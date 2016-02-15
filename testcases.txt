@@ -2,7 +2,7 @@
  Test Cases
  ==========
 
-1. ./tokenizer "today is a beautiful day"
+ 1. ./tokenizer "today is a beautiful day"
 
  Word			"today"
  Word			"is"
@@ -10,7 +10,7 @@
  Word			"beautiful"
  Word			"day"
 
-2. ./tokenizer "0x4356abdc 07777 [] "
+ 2. ./tokenizer "0x4356abdc 07777 [] "
 
  Hex			"0x4356abdc"
  Octal			"07777"
@@ -18,7 +18,7 @@
  Right Bracket		"]"
 
 
-3. ./tokenizer " array[xyz ] + = pi 3.14159e-10 "
+ 3. ./tokenizer " array[xyz ] + = pi 3.14159e-10 "
 
  Word 			"array"
  Left Brace 		"["
@@ -29,7 +29,7 @@
  Word 			"pi"
  Float		        "3.14159e-10"
 
-4. ./tokenizer "+123.0 0xg0Xf21B 07721 [hi"
+ 4. ./tokenizer "+123.0 0xg0Xf21B 07721 [hi"
 
  Plus			"+"
  Float			"123.0"
@@ -39,7 +39,7 @@
  Left Bracket		"["
  Word			"hi"
 
-5. ./tokenizer " \n123\b <> 123.2.eeeeeee 0123456789 "
+ 5. ./tokenizer " \n123\b <> 123.2.eeeeeee 0123456789 "
 
  ESCAPE			"[0x5C6E]"
  Integer		"123"
@@ -52,7 +52,7 @@
  Octal			"01234567"
  Integer		"89"
 
-6. ./tokenizer "238.22e92.2 \t\\ 0x9F2.0abc +-~ | {HI}"
+ 6. ./tokenizer "238.22e92.2 \t\\ 0x9F2.0abc +-~ | {HI}"
 
  Float			"238.22e92.2"
  ESCAPE			"[0x5c74]"
@@ -69,7 +69,7 @@
  Word			"HI"
  Right Brace		"}"
 
-7. ./tokenizer "0xZ22 POW.2 ;:1337.k"
+ 7. ./tokenizer "0xZ22 POW.2 ;:1337.k"
 
  ERROR			"0xZ"
  Integer		"22"
